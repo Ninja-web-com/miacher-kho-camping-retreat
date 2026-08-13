@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>About Miacher Kho | Nagar Valley Camping</title>
+  <meta name="description" content="The story of Miacher Kho Camping & Nature Retreat in Nagar Valley, Gilgit-Baltistan. Mountain setting, local hospitality and a peaceful outdoor experience." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{forest:'#24382B',mountain:'#3E5C45',sand:'#C9A66B',snow:'#F7F5F0',stone:'#6A6A64',charcoal:'#20221F'},fontFamily:{display:['Playfair Display','serif'],body:['Inter','sans-serif']}}}}</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>body{font-family:'Inter',sans-serif}.font-display{font-family:'Playfair Display',serif}.sticky-bar{padding-bottom:env(safe-area-inset-bottom)}</style>
+</head>
+<body class="bg-snow text-charcoal">
+<script>
+  const CONFIG={whatsapp:"923001234567",phone:"+92 300 1234567",email:"hello@miacherkho.com"};
+  function openWA(msg){window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`,'_blank')}
+</script>
+
+<header class="bg-forest text-white">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-5 flex items-center justify-between">
+    <a href="index.html" class="font-display text-2xl">Miacher Kho</a>
+    <nav class="hidden lg:flex gap-7 text-sm font-medium text-white/90">
+      <a href="index.html" class="hover:text-sand">Home</a>
+      <a href="about.html" class="text-sand">About</a>
+      <a href="stay.html" class="hover:text-sand">Stay</a>
+      <a href="experiences.html" class="hover:text-sand">Experiences</a>
+      <a href="packages.html" class="hover:text-sand">Packages</a>
+      <a href="gallery.html" class="hover:text-sand">Gallery</a>
+      <a href="location.html" class="hover:text-sand">Plan Your Trip</a>
+      <a href="contact.html" class="hover:text-sand">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="#" onclick="openWA('Hi, I would like to know more about Miacher Kho.')" class="hidden md:inline-flex bg-sand text-forest px-5 py-2.5 rounded-full text-sm font-semibold">Book Your Stay</a>
+      <button onclick="document.getElementById('mmenu').classList.toggle('translate-x-full')" class="lg:hidden text-2xl"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<div id="mmenu" class="fixed inset-0 z-50 bg-forest text-white translate-x-full transition-transform lg:hidden">
+  <div class="flex justify-between p-6"><span class="font-display text-2xl">Miacher Kho</span><button onclick="document.getElementById('mmenu').classList.add('translate-x-full')" class="text-3xl"><i class="fa-solid fa-xmark"></i></button></div>
+  <nav class="flex flex-col px-8 pt-6 space-y-5 text-xl">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="stay.html">Stay</a><a href="experiences.html">Experiences</a><a href="packages.html">Packages</a><a href="gallery.html">Gallery</a><a href="location.html">Location</a><a href="contact.html">Contact</a>
+    <a href="#" onclick="openWA('Hi, I would like to book a stay.')" class="mt-6 bg-sand text-forest py-4 rounded-full text-center font-semibold">Book via WhatsApp</a>
+  </nav>
+</div>
+
+<section class="py-16 md:py-24">
+  <div class="max-w-4xl mx-auto px-5 md:px-8">
+    <p class="text-sand tracking-widest text-xs uppercase mb-3">Our Story</p>
+    <h1 class="font-display text-4xl md:text-5xl mb-8">About Miacher Kho</h1>
+    <div class="space-y-6 text-stone leading-relaxed text-lg">
+      <p>Miacher Kho is a mountain campsite in Nagar Valley, Gilgit-Baltistan. It sits in a landscape shaped by the Karakoram, with views that include the presence of Rakaposhi and the surrounding peaks.</p>
+      <p>The experience is intentionally simple: tents, open sky, mountain light, and the quiet that comes from being away from the noise of cities. Guests come for the scenery, the night sky, and a slower pace.</p>
+      <p>We focus on providing a safe, welcoming base for travelers who want authentic outdoor living rather than a resort. Facilities are practical. The setting is the main reason people return.</p>
+      <p>Whether you arrive as a couple, a family, a group of friends, or a university team, the goal is the same — to let the mountains do the talking.</p>
+    </div>
+    <div class="mt-12">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80" alt="Nagar Valley landscape" class="w-full h-72 md:h-96 object-cover" />
+    </div>
+    <div class="mt-12 flex flex-col sm:flex-row gap-4">
+      <a href="stay.html" class="inline-flex justify-center bg-forest text-white px-8 py-4 rounded-full font-semibold hover:bg-mountain transition">Explore Accommodation</a>
+      <a href="#" onclick="openWA('Hi, I would like to know more about Miacher Kho.')" class="inline-flex justify-center border border-forest text-forest px-8 py-4 rounded-full font-medium hover:bg-forest hover:text-white transition">Ask on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-charcoal text-white/70 py-12">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 flex flex-col md:flex-row justify-between gap-8">
+    <div><p class="font-display text-xl text-white">Miacher Kho</p><p class="text-sm mt-1">Nagar Valley, Gilgit-Baltistan</p></div>
+    <div class="text-sm space-y-1"><a href="contact.html" class="hover:text-sand">Contact</a> · <a href="packages.html" class="hover:text-sand">Packages</a> · <a href="faq.html" class="hover:text-sand">FAQ</a></div>
+  </div>
+</footer>
+
+<div class="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-forest text-white sticky-bar border-t border-white/10">
+  <div class="grid grid-cols-3 divide-x divide-white/15">
+    <a href="tel:+923001234567" class="flex flex-col items-center py-3.5 text-xs gap-1"><i class="fa-solid fa-phone text-lg"></i>Call</a>
+    <a href="#" onclick="openWA('Hi, I am interested in Miacher Kho.')" class="flex flex-col items-center py-3.5 text-xs gap-1 bg-sand text-forest font-semibold"><i class="fa-brands fa-whatsapp text-lg"></i>WhatsApp</a>
+    <a href="packages.html" class="flex flex-col items-center py-3.5 text-xs gap-1"><i class="fa-solid fa-calendar-check text-lg"></i>Book</a>
+  </div>
+</div>
+<div class="h-16 md:hidden"></div>
+</body>
+</html>

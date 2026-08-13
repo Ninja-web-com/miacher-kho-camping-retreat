@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Stay at Miacher Kho | Camping Options</title>
+  <meta name="description" content="Standard, Premium and Group camping options at Miacher Kho in Nagar Valley. Capacity, facilities and how to enquire." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{forest:'#24382B',mountain:'#3E5C45',sand:'#C9A66B',snow:'#F7F5F0',stone:'#6A6A64',charcoal:'#20221F'},fontFamily:{display:['Playfair Display','serif']}}}}</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>body{font-family:'Inter',sans-serif}.font-display{font-family:'Playfair Display',serif}.sticky-bar{padding-bottom:env(safe-area-inset-bottom)}</style>
+</head>
+<body class="bg-snow text-charcoal">
+<script>
+  const CONFIG={whatsapp:"923001234567"};
+  function openWA(msg){window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`,'_blank')}
+</script>
+
+<header class="bg-forest text-white">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-5 flex items-center justify-between">
+    <a href="index.html" class="font-display text-2xl">Miacher Kho</a>
+    <nav class="hidden lg:flex gap-7 text-sm font-medium text-white/90">
+      <a href="index.html" class="hover:text-sand">Home</a>
+      <a href="about.html" class="hover:text-sand">About</a>
+      <a href="stay.html" class="text-sand">Stay</a>
+      <a href="experiences.html" class="hover:text-sand">Experiences</a>
+      <a href="packages.html" class="hover:text-sand">Packages</a>
+      <a href="gallery.html" class="hover:text-sand">Gallery</a>
+      <a href="location.html" class="hover:text-sand">Plan Your Trip</a>
+      <a href="contact.html" class="hover:text-sand">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="#" onclick="openWA('Hi, I would like to know about accommodation at Miacher Kho.')" class="hidden md:inline-flex bg-sand text-forest px-5 py-2.5 rounded-full text-sm font-semibold">Book Your Stay</a>
+      <button onclick="document.getElementById('mmenu').classList.toggle('translate-x-full')" class="lg:hidden text-2xl"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<div id="mmenu" class="fixed inset-0 z-50 bg-forest text-white translate-x-full transition-transform lg:hidden">
+  <div class="flex justify-between p-6"><span class="font-display text-2xl">Miacher Kho</span><button onclick="document.getElementById('mmenu').classList.add('translate-x-full')" class="text-3xl"><i class="fa-solid fa-xmark"></i></button></div>
+  <nav class="flex flex-col px-8 pt-6 space-y-5 text-xl">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="stay.html">Stay</a><a href="experiences.html">Experiences</a><a href="packages.html">Packages</a><a href="gallery.html">Gallery</a><a href="location.html">Location</a><a href="contact.html">Contact</a>
+    <a href="#" onclick="openWA('Hi, I would like to book a stay.')" class="mt-6 bg-sand text-forest py-4 rounded-full text-center font-semibold">Book via WhatsApp</a>
+  </nav>
+</div>
+
+<section class="py-16 md:py-24">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="max-w-2xl mb-14">
+      <p class="text-sand tracking-widest text-xs uppercase mb-3">Accommodation</p>
+      <h1 class="font-display text-4xl md:text-5xl mb-4">Stay at Miacher Kho</h1>
+      <p class="text-stone">We offer simple, honest camping options. Facilities are practical. The mountains are the main feature.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <article class="bg-white border border-stone/10 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80" alt="Standard camping" class="w-full h-56 object-cover" />
+        <div class="p-7">
+          <h2 class="font-display text-2xl mb-2">Standard Camping</h2>
+          <p class="text-stone text-sm mb-4">For travelers who want a classic outdoor experience.</p>
+          <ul class="text-sm text-stone space-y-1.5 mb-6">
+            <li>• Capacity: 2–3 guests</li>
+            <li>• Sleeping mats & blankets</li>
+            <li>• Shared facilities</li>
+          </ul>
+          <p class="text-forest font-semibold mb-5">Enquire for current rates</p>
+          <a href="#" onclick="openWA('Hi, I am interested in Standard Camping at Miacher Kho. Please share availability and details.')" class="inline-flex items-center gap-2 text-sm font-semibold text-forest border-b border-forest">Ask About Availability <i class="fa-solid fa-arrow-right text-xs"></i></a>
+        </div>
+      </article>
+
+      <article class="bg-white border border-stone/10 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=800&q=80" alt="Premium camping" class="w-full h-56 object-cover" />
+        <div class="p-7">
+          <h2 class="font-display text-2xl mb-2">Premium Camping</h2>
+          <p class="text-stone text-sm mb-4">Extra comfort while still sleeping under the peaks.</p>
+          <ul class="text-sm text-stone space-y-1.5 mb-6">
+            <li>• Capacity: 2–4 guests</li>
+            <li>• Better bedding</li>
+            <li>• Preferred views where available</li>
+          </ul>
+          <p class="text-forest font-semibold mb-5">Enquire for current rates</p>
+          <a href="#" onclick="openWA('Hi, I am interested in Premium Camping at Miacher Kho. Please share availability and details.')" class="inline-flex items-center gap-2 text-sm font-semibold text-forest border-b border-forest">Enquire on WhatsApp <i class="fa-solid fa-arrow-right text-xs"></i></a>
+        </div>
+      </article>
+
+      <article class="bg-white border border-stone/10 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=800&q=80" alt="Group camping" class="w-full h-56 object-cover" />
+        <div class="p-7">
+          <h2 class="font-display text-2xl mb-2">Group Camping</h2>
+          <p class="text-stone text-sm mb-4">Friends, university groups, corporate teams and photographers.</p>
+          <ul class="text-sm text-stone space-y-1.5 mb-6">
+            <li>• Flexible group size</li>
+            <li>• Custom arrangements</li>
+            <li>• Activities on request</li>
+          </ul>
+          <p class="text-forest font-semibold mb-5">Custom pricing</p>
+          <a href="#" onclick="openWA('Hi, we are planning a group stay at Miacher Kho. Please share options and rates.')" class="inline-flex items-center gap-2 text-sm font-semibold text-forest border-b border-forest">Plan a Group Stay <i class="fa-solid fa-arrow-right text-xs"></i></a>
+        </div>
+      </article>
+    </div>
+
+    <div class="mt-16 bg-white border border-stone/10 p-8 max-w-3xl">
+      <h3 class="font-display text-2xl mb-4">Facilities</h3>
+      <p class="text-stone text-sm mb-4">We are honest about what is available:</p>
+      <ul class="grid sm:grid-cols-2 gap-2 text-sm text-stone">
+        <li>• Basic washrooms</li>
+        <li>• Drinking water</li>
+        <li>• Limited solar power</li>
+        <li>• Bonfire area</li>
+        <li>• Limited mobile network</li>
+        <li>• Food available on request</li>
+      </ul>
+      <p class="text-stone text-sm mt-4">Please do not expect continuous electricity or strong internet. The focus is the outdoor setting.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-charcoal text-white/70 py-10">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 text-sm">
+    <a href="index.html" class="hover:text-sand">Home</a> · <a href="packages.html" class="hover:text-sand">Packages</a> · <a href="contact.html" class="hover:text-sand">Contact</a>
+  </div>
+</footer>
+
+<div class="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-forest text-white sticky-bar border-t border-white/10">
+  <div class="grid grid-cols-3 divide-x divide-white/15">
+    <a href="tel:+923001234567" class="flex flex-col items-center py-3.5 text-xs gap-1"><i class="fa-solid fa-phone text-lg"></i>Call</a>
+    <a href="#" onclick="openWA('Hi, I want to know about staying at Miacher Kho.')" class="flex flex-col items-center py-3.5 text-xs gap-1 bg-sand text-forest font-semibold"><i class="fa-brands fa-whatsapp text-lg"></i>WhatsApp</a>
+    <a href="packages.html" class="flex flex-col items-center py-3.5 text-xs gap-1"><i class="fa-solid fa-calendar-check text-lg"></i>Book</a>
+  </div>
+</div>
+<div class="h-16 md:hidden"></div>
+</body>
+</html>

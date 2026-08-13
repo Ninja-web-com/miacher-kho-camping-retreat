@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Contact & Book Your Stay | Miacher Kho</title>
+  <meta name="description" content="Contact Miacher Kho Camping & Nature Retreat. Enquire via WhatsApp, phone or form for availability and booking." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{forest:'#24382B',mountain:'#3E5C45',sand:'#C9A66B',snow:'#F7F5F0',stone:'#6A6A64',charcoal:'#20221F'},fontFamily:{display:['Playfair Display','serif']}}}}</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>body{font-family:'Inter',sans-serif}.font-display{font-family:'Playfair Display',serif}.sticky-bar{padding-bottom:env(safe-area-inset-bottom)}</style>
+</head>
+<body class="bg-snow text-charcoal">
+<script>
+  const CONFIG={whatsapp:"923001234567",phone:"+92 300 1234567",email:"hello@miacherkho.com",maps:"https://maps.google.com/?q=Nagar+Valley+Gilgit-Baltistan"};
+  function openWA(msg){window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`,'_blank')}
+  function handleForm(e){
+    e.preventDefault();
+    document.getElementById('form-ok').classList.remove('hidden');
+    setTimeout(()=>openWA('Hi, I just submitted an enquiry on the Miacher Kho website. Looking forward to hearing from you.'),900);
+  }
+</script>
+
+<header class="bg-forest text-white">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-5 flex items-center justify-between">
+    <a href="index.html" class="font-display text-2xl">Miacher Kho</a>
+    <nav class="hidden lg:flex gap-7 text-sm font-medium text-white/90">
+      <a href="index.html" class="hover:text-sand">Home</a>
+      <a href="about.html" class="hover:text-sand">About</a>
+      <a href="stay.html" class="hover:text-sand">Stay</a>
+      <a href="experiences.html" class="hover:text-sand">Experiences</a>
+      <a href="packages.html" class="hover:text-sand">Packages</a>
+      <a href="gallery.html" class="hover:text-sand">Gallery</a>
+      <a href="location.html" class="hover:text-sand">Plan Your Trip</a>
+      <a href="contact.html" class="text-sand">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="#" onclick="openWA('Hi, I would like to book a stay at Miacher Kho.')" class="hidden md:inline-flex bg-sand text-forest px-5 py-2.5 rounded-full text-sm font-semibold">Book Your Stay</a>
+      <button onclick="document.getElementById('mmenu').classList.toggle('translate-x-full')" class="lg:hidden text-2xl"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<div id="mmenu" class="fixed inset-0 z-50 bg-forest text-white translate-x-full transition-transform lg:hidden">
+  <div class="flex justify-between p-6"><span class="font-display text-2xl">Miacher Kho</span><button onclick="document.getElementById('mmenu').classList.add('translate-x-full')" class="text-3xl"><i class="fa-solid fa-xmark"></i></button></div>
+  <nav class="flex flex-col px-8 pt-6 space-y-5 text-xl">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="stay.html">Stay</a><a href="experiences.html">Experiences</a><a href="packages.html">Packages</a><a href="gallery.html">Gallery</a><a href="location.html">Location</a><a href="contact.html">Contact</a>
+    <a href="#" onclick="openWA('Hi, I would like to book a stay.')" class="mt-6 bg-sand text-forest py-4 rounded-full text-center font-semibold">Book via WhatsApp</a>
+  </nav>
+</div>
+
+<section class="py-16 md:py-24">
+  <div class="max-w-4xl mx-auto px-5 md:px-8">
+    <div class="text-center mb-12">
+      <p class="text-sand tracking-widest text-xs uppercase mb-3">Get in Touch</p>
+      <h1 class="font-display text-4xl md:text-5xl mb-4">Contact & Book Your Stay</h1>
+      <p class="text-stone">The fastest way to check availability is WhatsApp.</p>
+    </div>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-14">
+      <a href="#" onclick="openWA('Hi, I would like to check availability and book a stay at Miacher Kho.')" class="inline-flex items-center justify-center gap-3 bg-sand text-forest px-8 py-4 rounded-full font-semibold text-lg hover:bg-white border border-sand transition">
+        <i class="fa-brands fa-whatsapp text-xl"></i> Chat on WhatsApp
+      </a>
+      <a href="tel:+923001234567" class="inline-flex items-center justify-center gap-3 border border-forest text-forest px-8 py-4 rounded-full font-medium hover:bg-forest hover:text-white transition">
+        <i class="fa-solid fa-phone"></i> Call Us
+      </a>
+    </div>
+
+    <div class="bg-white border border-stone/10 p-8 md:p-10">
+      <h2 class="font-display text-2xl mb-6">Send an Enquiry</h2>
+      <form onsubmit="handleForm(event)">
+        <div class="grid sm:grid-cols-2 gap-5 mb-5">
+          <div>
+            <label class="block text-sm text-stone mb-1.5">Name</label>
+            <input type="text" required class="w-full border border-stone/20 rounded-lg px-4 py-3 focus:outline-none focus:border-forest" placeholder="Your name" />
+          </div>
+          <div>
+            <label class="block text-sm text-stone mb-1.5">Phone or Email</label>
+            <input type="text" required class="w-full border border-stone/20 rounded-lg px-4 py-3 focus:outline-none focus:border-forest" placeholder="Contact detail" />
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-5 mb-5">
+          <div>
+            <label class="block text-sm text-stone mb-1.5">Preferred Dates</label>
+            <input type="text" class="w-full border border-stone/20 rounded-lg px-4 py-3 focus:outline-none focus:border-forest" placeholder="e.g. 15–18 Aug" />
+          </div>
+          <div>
+            <label class="block text-sm text-stone mb-1.5">Number of Guests</label>
+            <input type="number" min="1" class="w-full border border-stone/20 rounded-lg px-4 py-3 focus:outline-none focus:border-forest" placeholder="2" />
+          </div>
+        </div>
+        <div class="mb-5">
+          <label class="block text-sm text-stone mb-1.5">Interested Package (optional)</label>
+          <select class="w-full border border-stone/20 rounded-lg px-4 py-3 focus:outline-none focus:border-forest">
+            <option value="">Select if known</option>
+            <option>Explorer</option>
+            <option>Mountain Experience</option>
+            <option>Private / Group</option>
+          </select>
+        </div>
+        <div class="mb-6">
+          <label class="block text-sm text-stone mb-1.5">Message</label>
+          <textarea rows="3" class="w-full border border-stone/20 rounded-lg px-4 py-3 focus:outline-none focus:border-forest" placeholder="Tell us a little about your plans..."></textarea>
+        </div>
+        <button type="submit" class="w-full bg-forest text-white py-3.5 rounded-full font-semibold hover:bg-mountain transition">Send Enquiry</button>
+        <p id="form-ok" class="hidden mt-4 text-center text-forest text-sm">Thank you. We will respond soon. You can also message us directly on WhatsApp.</p>
+      </form>
+    </div>
+
+    <div class="mt-10 text-center text-sm text-stone">
+      <p>Email: <a href="mailto:hello@miacherkho.com" class="text-forest hover:underline">hello@miacherkho.com</a></p>
+      <p class="mt-2"><a href="#" onclick="window.open(CONFIG.maps,'_blank')" class="text-forest hover:underline">Get Directions on Maps</a></p>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-charcoal text-white/70 py-10">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 text-sm">
+    <a href="index.html" class="hover:text-sand">Home</a> · <a href="packages.html" class="hover:text-sand">Packages</a> · <a href="faq.html" class="hover:text-sand">FAQ</a>
+  </div>
+</footer>
+
+<div class="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-forest text-white sticky-bar border-t border-white/10">
+  <div class="grid grid-cols-3 divide-x divide-white/15">
+    <a href="tel:+923001234567" class="flex flex-col items-center py-3.5 text-xs gap-1"><i class="fa-solid fa-phone text-lg"></i>Call</a>
+    <a href="#" onclick="openWA('Hi, I would like to book a stay at Miacher Kho.')" class="flex flex-col items-center py-3.5 text-xs gap-1 bg-sand text-forest font-semibold"><i class="fa-brands fa-whatsapp text-lg"></i>WhatsApp</a>
+    <a href="packages.html" class="flex flex-col items-center py-3.5 text-xs gap-1"><i class="fa-solid fa-calendar-check text-lg"></i>Book</a>
+  </div>
+</div>
+<div class="h-16 md:hidden"></div>
+</body>
+</html>

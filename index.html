@@ -4,18 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Miacher Kho Camping & Nature Retreat | Nagar Valley, Gilgit-Baltistan</title>
-  <meta name="description" content="Premium camping experience in Nagar Valley with breathtaking Rakaposhi views. Peaceful mountain camping, star-filled nights, local hospitality and authentic adventure. Book your stay via WhatsApp." />
-  <meta name="keywords" content="Miacher Kho, camping Nagar Valley, Rakaposhi camping, Gilgit-Baltistan camping, mountain camping Pakistan, Hunza Nagar camping" />
+  <meta name="description" content="Premium mountain camping in Nagar Valley with Rakaposhi views. Peaceful nature retreat, stargazing, bonfires and local hospitality. Book via WhatsApp." />
   <meta property="og:title" content="Miacher Kho Camping & Nature Retreat" />
-  <meta property="og:description" content="Camp above the clouds. Wake up to Rakaposhi. Premium nature retreat in Nagar Valley." />
-  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Camp in the heart of the Karakoram. Wake up to Rakaposhi." />
   <meta name="theme-color" content="#24382B" />
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -38,968 +33,274 @@
     }
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-
   <style>
     body { font-family: 'Inter', sans-serif; }
     .font-display { font-family: 'Playfair Display', serif; }
-    .hero-overlay { background: linear-gradient(to bottom, rgba(32,34,31,0.35) 0%, rgba(32,34,31,0.55) 60%, rgba(32,34,31,0.75) 100%); }
-    .section-padding { padding-top: 5rem; padding-bottom: 5rem; }
-    @media (min-width: 768px) { .section-padding { padding-top: 7rem; padding-bottom: 7rem; } }
-    .gallery-item { break-inside: avoid; margin-bottom: 1rem; }
+    .hero-overlay { background: linear-gradient(to bottom, rgba(32,34,31,0.3) 0%, rgba(32,34,31,0.55) 50%, rgba(32,34,31,0.8) 100%); }
     .sticky-bar { padding-bottom: env(safe-area-inset-bottom); }
-    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
-    .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
-    .accordion-content.open { max-height: 400px; }
   </style>
 </head>
 <body class="bg-snow text-charcoal antialiased">
 
-  <!-- ===================== CONFIG (Easy to update) ===================== -->
-  <script>
-    const CONFIG = {
-      whatsappNumber: "923001234567", // CHANGE THIS to real number (country code without +)
-      phoneNumber: "+92 300 1234567",
-      email: "hello@miacherkho.com",
-      instagram: "https://instagram.com/miacherkho",
-      facebook: "https://facebook.com/miacherkho",
-      mapsLink: "https://maps.google.com/?q=Nagar+Valley+Gilgit-Baltistan",
-      mapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.0!2d74.7!3d36.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDEyJzAwLjAiTiA3NMKwNDInMDAuMCJF!5e0!3m2!1sen!2s!4v1700000000000"
-    };
+<script>
+  const CONFIG = {
+    whatsapp: "923001234567",
+    phone: "+92 300 1234567",
+    email: "hello@miacherkho.com",
+    maps: "https://maps.google.com/?q=Nagar+Valley+Gilgit-Baltistan"
+  };
+  function wa(msg) {
+    return `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+  }
+  function openWA(msg) { window.open(wa(msg), '_blank'); }
+</script>
 
-    function waLink(message) {
-      return `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
-    }
-  </script>
-
-  <!-- ===================== NAVBAR ===================== -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
-    <div class="max-w-7xl mx-auto px-5 md:px-8 py-5 flex items-center justify-between">
-      <a href="#home" class="font-display text-2xl md:text-3xl text-white tracking-wide">Miacher Kho</a>
-      
-      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-white/90">
-        <a href="#experience" class="hover:text-sand transition">Experience</a>
-        <a href="#stay" class="hover:text-sand transition">Stay</a>
-        <a href="#activities" class="hover:text-sand transition">Activities</a>
-        <a href="#gallery" class="hover:text-sand transition">Gallery</a>
-        <a href="#packages" class="hover:text-sand transition">Packages</a>
-        <a href="#location" class="hover:text-sand transition">Location</a>
-        <a href="#faq" class="hover:text-sand transition">FAQ</a>
-      </nav>
-
-      <div class="flex items-center gap-3">
-        <a id="nav-cta" href="#" onclick="openWhatsApp('Hi, I would like to know more about camping at Miacher Kho.')" 
-           class="hidden md:inline-flex items-center gap-2 bg-sand text-forest px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-white transition">
-          Book Your Stay
-        </a>
-        <button id="menu-btn" onclick="toggleMenu()" class="lg:hidden text-white text-2xl p-2" aria-label="Open menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile Full-screen Menu -->
-  <div id="mobile-menu" class="fixed inset-0 z-[60] bg-forest text-white translate-x-full transition-transform duration-300 lg:hidden">
-    <div class="flex justify-between items-center p-6">
-      <span class="font-display text-2xl">Miacher Kho</span>
-      <button onclick="toggleMenu()" class="text-3xl" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-    <nav class="flex flex-col px-8 pt-10 space-y-6 text-xl font-medium">
-      <a href="#experience" onclick="toggleMenu()">Experience</a>
-      <a href="#stay" onclick="toggleMenu()">Stay</a>
-      <a href="#activities" onclick="toggleMenu()">Activities</a>
-      <a href="#gallery" onclick="toggleMenu()">Gallery</a>
-      <a href="#packages" onclick="toggleMenu()">Packages</a>
-      <a href="#location" onclick="toggleMenu()">Location</a>
-      <a href="#reviews" onclick="toggleMenu()">Reviews</a>
-      <a href="#faq" onclick="toggleMenu()">FAQ</a>
-      <a href="#contact" onclick="toggleMenu()">Contact</a>
-      <a href="#" onclick="openWhatsApp('Hi, I would like to book a stay at Miacher Kho.'); toggleMenu();" 
-         class="mt-8 inline-flex items-center justify-center gap-3 bg-sand text-forest py-4 rounded-full font-semibold">
-        <i class="fa-brands fa-whatsapp text-xl"></i> Book via WhatsApp
-      </a>
+<!-- HEADER -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-5 flex items-center justify-between">
+    <a href="index.html" class="font-display text-2xl md:text-3xl text-white tracking-wide">Miacher Kho</a>
+    <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-white/90">
+      <a href="index.html" class="hover:text-sand">Home</a>
+      <a href="about.html" class="hover:text-sand">About</a>
+      <a href="stay.html" class="hover:text-sand">Stay</a>
+      <a href="experiences.html" class="hover:text-sand">Experiences</a>
+      <a href="packages.html" class="hover:text-sand">Packages</a>
+      <a href="gallery.html" class="hover:text-sand">Gallery</a>
+      <a href="location.html" class="hover:text-sand">Plan Your Trip</a>
+      <a href="contact.html" class="hover:text-sand">Contact</a>
     </nav>
-  </div>
-
-  <!-- ===================== HERO ===================== -->
-  <section id="home" class="relative h-screen min-h-[640px] flex items-end md:items-center overflow-hidden">
-    <!-- Background Image (replace with real Miacher Kho / Rakaposhi photo) -->
-    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=80" 
-         alt="Dramatic mountain peaks and valleys in Gilgit-Baltistan" 
-         class="absolute inset-0 w-full h-full object-cover" />
-    <div class="absolute inset-0 hero-overlay"></div>
-
-    <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8 pb-24 md:pb-0 w-full">
-      <p class="text-sand tracking-[0.25em] text-xs md:text-sm uppercase mb-4 font-medium">Nagar Valley • Gilgit-Baltistan</p>
-      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.1] max-w-3xl mb-6">
-        Camp Above the Clouds.<br />Wake Up to Rakaposhi.
-      </h1>
-      <p class="text-white/85 text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
-        Experience peaceful mountain camping, unforgettable sunsets, star-filled nights, and the raw beauty of Nagar Valley.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a href="#packages" class="inline-flex items-center justify-center gap-2 bg-sand text-forest px-8 py-4 rounded-full font-semibold text-base hover:bg-white transition">
-          Plan Your Stay
-        </a>
-        <a href="#experience" class="inline-flex items-center justify-center gap-2 border border-white/60 text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition">
-          Explore the Camp
-        </a>
-      </div>
-    </div>
-
-    <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 text-xs tracking-widest uppercase flex flex-col items-center gap-2">
-      <span>Scroll to Explore</span>
-      <div class="w-px h-8 bg-white/50 animate-pulse"></div>
-    </div>
-  </section>
-
-  <!-- ===================== QUICK HIGHLIGHTS ===================== -->
-  <section id="experience" class="bg-forest text-white section-padding">
-    <div class="max-w-7xl mx-auto px-5 md:px-8">
-      <div class="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory md:grid md:grid-cols-5 md:overflow-visible md:pb-0 scrollbar-hide">
-        <div class="min-w-[260px] md:min-w-0 snap-start">
-          <div class="text-sand text-3xl mb-3"><i class="fa-solid fa-mountain"></i></div>
-          <h3 class="font-display text-xl mb-2">360° Mountain Views</h3>
-          <p class="text-white/70 text-sm leading-relaxed">Wake up surrounded by the Karakoram.</p>
-        </div>
-        <div class="min-w-[260px] md:min-w-0 snap-start">
-          <div class="text-sand text-3xl mb-3"><i class="fa-solid fa-star"></i></div>
-          <h3 class="font-display text-xl mb-2">Stargazing</h3>
-          <p class="text-white/70 text-sm leading-relaxed">Escape city lights and experience clear mountain skies.</p>
-        </div>
-        <div class="min-w-[260px] md:min-w-0 snap-start">
-          <div class="text-sand text-3xl mb-3"><i class="fa-solid fa-fire"></i></div>
-          <h3 class="font-display text-xl mb-2">Bonfire Nights</h3>
-          <p class="text-white/70 text-sm leading-relaxed">Relax around the fire under the stars.</p>
-        </div>
-        <div class="min-w-[260px] md:min-w-0 snap-start">
-          <div class="text-sand text-3xl mb-3"><i class="fa-solid fa-hand-holding-heart"></i></div>
-          <h3 class="font-display text-xl mb-2">Local Hospitality</h3>
-          <p class="text-white/70 text-sm leading-relaxed">Experience the warmth, food and culture of Nagar Valley.</p>
-        </div>
-        <div class="min-w-[260px] md:min-w-0 snap-start">
-          <div class="text-sand text-3xl mb-3"><i class="fa-solid fa-car"></i></div>
-          <h3 class="font-display text-xl mb-2">4x4 Adventure</h3>
-          <p class="text-white/70 text-sm leading-relaxed">The journey to Miacher Kho is part of the experience.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== INTRODUCTION / STORY ===================== -->
-  <section class="section-padding bg-snow">
-    <div class="max-w-7xl mx-auto px-5 md:px-8 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-      <div class="fade-up">
-        <p class="text-sand tracking-widest text-xs uppercase mb-4">The Place</p>
-        <h2 class="font-display text-4xl md:text-5xl text-charcoal leading-tight mb-6">A Place Above the Valley</h2>
-        <div class="space-y-4 text-stone leading-relaxed">
-          <p>High above Nagar Valley, Miacher Kho offers a rare kind of silence — the kind only found when you leave the noise of the world behind.</p>
-          <p>From the campsite you look out toward the towering presence of Rakaposhi and the surrounding Karakoram peaks. Sunrises arrive in soft gold. Nights are filled with stars.</p>
-          <p>This is not a resort. It is a carefully chosen piece of mountain land where tents face the peaks, fires are lit under open skies, and the only soundtrack is wind and distant rivers.</p>
-        </div>
-      </div>
-      <div class="fade-up">
-        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1000&q=80" 
-             alt="Mountain landscape near Nagar Valley" 
-             class="w-full h-[420px] md:h-[520px] object-cover rounded-sm shadow-xl" />
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== CINEMATIC IMAGE BREAK ===================== -->
-  <section class="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
-    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=2000&q=80" 
-         alt="Snow-capped peaks under dramatic sky" class="absolute inset-0 w-full h-full object-cover" />
-    <div class="absolute inset-0 bg-charcoal/50"></div>
-    <p class="relative z-10 font-display text-3xl md:text-5xl text-white text-center px-6 max-w-3xl leading-snug">
-      “Some places are visited.<br />Others are experienced.”
-    </p>
-  </section>
-
-  <!-- ===================== ACCOMMODATION ===================== -->
-  <section id="stay" class="section-padding bg-snow">
-    <div class="max-w-7xl mx-auto px-5 md:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-14 fade-up">
-        <p class="text-sand tracking-widest text-xs uppercase mb-3">Stay Your Way</p>
-        <h2 class="font-display text-4xl md:text-5xl text-charcoal">Accommodation</h2>
-        <p class="mt-4 text-stone">Choose the experience that matches how you want to sleep under the mountains.</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Standard Tent -->
-        <article class="bg-white border border-stone/10 overflow-hidden fade-up group">
-          <div class="overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80" 
-                 alt="Standard camping tent in mountains" class="w-full h-64 object-cover group-hover:scale-105 transition duration-700" />
-          </div>
-          <div class="p-7">
-            <h3 class="font-display text-2xl mb-2">Standard Tent</h3>
-            <p class="text-sm text-stone mb-4">Authentic camping for travelers who want simplicity and the full outdoor feel.</p>
-            <ul class="text-sm text-stone space-y-1.5 mb-6">
-              <li>• Capacity: 2–3 guests</li>
-              <li>• Sleeping mats & blankets</li>
-              <li>• Shared facilities</li>
-            </ul>
-            <p class="text-forest font-semibold mb-5">Starting from PKR 4,500 / night</p>
-            <a href="#" onclick="openWhatsApp('Hi, I am interested in the Standard Tent at Miacher Kho. Please share availability and booking details.')" 
-               class="inline-flex items-center gap-2 text-sm font-semibold text-forest border-b border-forest pb-0.5 hover:text-mountain">
-              Ask About Availability <i class="fa-solid fa-arrow-right text-xs"></i>
-            </a>
-          </div>
-        </article>
-
-        <!-- Deluxe Tent -->
-        <article class="bg-white border border-stone/10 overflow-hidden fade-up group">
-          <div class="overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=800&q=80" 
-                 alt="More comfortable camping setup" class="w-full h-64 object-cover group-hover:scale-105 transition duration-700" />
-          </div>
-          <div class="p-7">
-            <h3 class="font-display text-2xl mb-2">Deluxe Tent</h3>
-            <p class="text-sm text-stone mb-4">Extra comfort while still sleeping under the peaks. Ideal for couples and small families.</p>
-            <ul class="text-sm text-stone space-y-1.5 mb-6">
-              <li>• Capacity: 2–4 guests</li>
-              <li>• Better bedding & views</li>
-              <li>• Priority seating at bonfire</li>
-            </ul>
-            <p class="text-forest font-semibold mb-5">Starting from PKR 7,500 / night</p>
-            <a href="#" onclick="openWhatsApp('Hi, I am interested in the Deluxe Tent at Miacher Kho. Please share availability and complete details.')" 
-               class="inline-flex items-center gap-2 text-sm font-semibold text-forest border-b border-forest pb-0.5 hover:text-mountain">
-              Enquire on WhatsApp <i class="fa-solid fa-arrow-right text-xs"></i>
-            </a>
-          </div>
-        </article>
-
-        <!-- Group -->
-        <article class="bg-white border border-stone/10 overflow-hidden fade-up group">
-          <div class="overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=800&q=80" 
-                 alt="Group camping in the mountains" class="w-full h-64 object-cover group-hover:scale-105 transition duration-700" />
-          </div>
-          <div class="p-7">
-            <h3 class="font-display text-2xl mb-2">Group Camping</h3>
-            <p class="text-sm text-stone mb-4">For friends, university groups, corporate retreats and photography crews.</p>
-            <ul class="text-sm text-stone space-y-1.5 mb-6">
-              <li>• Custom group size</li>
-              <li>• Flexible arrangements</li>
-              <li>• Activities on request</li>
-            </ul>
-            <p class="text-forest font-semibold mb-5">Custom Pricing</p>
-            <a href="#" onclick="openWhatsApp('Hi, we are planning a group trip to Miacher Kho. Please share available options and rates.')" 
-               class="inline-flex items-center gap-2 text-sm font-semibold text-forest border-b border-forest pb-0.5 hover:text-mountain">
-              Plan a Group Stay <i class="fa-solid fa-arrow-right text-xs"></i>
-            </a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== FACILITIES ===================== -->
-  <section class="bg-forest text-white section-padding">
-    <div class="max-w-7xl mx-auto px-5 md:px-8">
-      <div class="text-center mb-14 fade-up">
-        <p class="text-sand tracking-widest text-xs uppercase mb-3">Practical Details</p>
-        <h2 class="font-display text-4xl md:text-5xl">Facilities at a Glance</h2>
-      </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 text-center fade-up">
-        <div>
-          <i class="fa-solid fa-bed text-sand text-2xl mb-3"></i>
-          <p class="font-medium">Comfortable Sleeping</p>
-          <p class="text-white/60 text-sm mt-1">Mats, blankets & tents</p>
-        </div>
-        <div>
-          <i class="fa-solid fa-toilet text-sand text-2xl mb-3"></i>
-          <p class="font-medium">Washrooms</p>
-          <p class="text-white/60 text-sm mt-1">Clean basic facilities</p>
-        </div>
-        <div>
-          <i class="fa-solid fa-droplet text-sand text-2xl mb-3"></i>
-          <p class="font-medium">Drinking Water</p>
-          <p class="text-white/60 text-sm mt-1">Available on site</p>
-        </div>
-        <div>
-          <i class="fa-solid fa-solar-panel text-sand text-2xl mb-3"></i>
-          <p class="font-medium">Solar Power</p>
-          <p class="text-white/60 text-sm mt-1">Limited electricity</p>
-        </div>
-        <div>
-          <i class="fa-solid fa-signal text-sand text-2xl mb-3"></i>
-          <p class="font-medium">Mobile Network</p>
-          <p class="text-white/60 text-sm mt-1">Limited coverage</p>
-        </div>
-        <div>
-          <i class="fa-solid fa-car text-sand text-2xl mb-3"></i>
-          <p class="font-medium">Parking</p>
-          <p class="text-white/60 text-sm mt-1">Available nearby</p>
-        </div>
-        <div>
-          <i class="fa-solid fa-fire text-sand text-2xl mb-3"></i>
-          <p class="font-medium">Bonfire Area</p>
-          <p class="text-white/60 text-sm mt-1">Every evening</p>
-        </div>
-        <div>
-          <i class="fa-solid fa-utensils text-sand text-2xl mb-3"></i>
-          <p class="font-medium">Food Available</p>
-          <p class="text-white/60 text-sm mt-1">Local meals on request</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== ACTIVITIES ===================== -->
-  <section id="activities" class="section-padding bg-snow">
-    <div class="max-w-7xl mx-auto px-5 md:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-16 fade-up">
-        <p class="text-sand tracking-widest text-xs uppercase mb-3">What You Can Do</p>
-        <h2 class="font-display text-4xl md:text-5xl text-charcoal">Experiences</h2>
-      </div>
-
-      <!-- Alternating sections -->
-      <div class="space-y-20">
-        <div class="grid md:grid-cols-2 gap-10 items-center fade-up">
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=900&q=80" alt="Sunrise over mountains" class="w-full h-80 object-cover" />
-          <div>
-            <h3 class="font-display text-3xl mb-4">Sunrise Over Rakaposhi</h3>
-            <p class="text-stone leading-relaxed">Wake before the light and watch the peaks catch the first gold. One of the most memorable moments of any stay.</p>
-          </div>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-10 items-center fade-up">
-          <div class="md:order-2">
-            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80" alt="Golden hour mountains" class="w-full h-80 object-cover" />
-          </div>
-          <div class="md:order-1">
-            <h3 class="font-display text-3xl mb-4">Golden Hour & Sunset</h3>
-            <p class="text-stone leading-relaxed">As the day softens, the mountains change color. Perfect for photography, quiet conversation, or simply sitting still.</p>
-          </div>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-10 items-center fade-up">
-          <img src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&w=900&q=80" alt="Night sky with stars" class="w-full h-80 object-cover" />
-          <div>
-            <h3 class="font-display text-3xl mb-4">Stargazing & Bonfire</h3>
-            <p class="text-stone leading-relaxed">Away from city lights the sky opens up. Gather around the fire, share stories, and look up.</p>
-          </div>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-10 items-center fade-up">
-          <div class="md:order-2">
-            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=900&q=80" alt="Hiking in mountains" class="w-full h-80 object-cover" />
-          </div>
-          <div class="md:order-1">
-            <h3 class="font-display text-3xl mb-4">Hiking & Viewpoint Walks</h3>
-            <p class="text-stone leading-relaxed">Short walks and longer explorations around the camp reveal new angles of the valley and peaks.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== A DAY AT MIACHER KHO ===================== -->
-  <section class="section-padding bg-charcoal text-white">
-    <div class="max-w-4xl mx-auto px-5 md:px-8">
-      <div class="text-center mb-16 fade-up">
-        <p class="text-sand tracking-widest text-xs uppercase mb-3">Imagine Yourself Here</p>
-        <h2 class="font-display text-4xl md:text-5xl">A Day at Miacher Kho</h2>
-      </div>
-
-      <div class="space-y-12 relative">
-        <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-white/20 -translate-x-1/2 hidden md:block"></div>
-
-        <div class="flex flex-col md:flex-row gap-6 items-start fade-up">
-          <div class="md:w-1/2 md:text-right md:pr-12">
-            <span class="text-sand text-sm tracking-widest uppercase">Morning</span>
-            <h3 class="font-display text-2xl mt-1 mb-2">Wake to the Mountains</h3>
-            <p class="text-white/70 text-sm">Step out of your tent to Rakaposhi catching the first light. Hot tea, quiet air, and the day beginning slowly.</p>
-          </div>
-          <div class="hidden md:flex w-8 h-8 rounded-full bg-sand items-center justify-center text-forest text-sm font-bold shrink-0 relative z-10">1</div>
-          <div class="md:w-1/2 md:pl-12"></div>
-        </div>
-
-        <div class="flex flex-col md:flex-row gap-6 items-start fade-up">
-          <div class="md:w-1/2 md:pr-12"></div>
-          <div class="hidden md:flex w-8 h-8 rounded-full bg-sand items-center justify-center text-forest text-sm font-bold shrink-0 relative z-10">2</div>
-          <div class="md:w-1/2 md:pl-12">
-            <span class="text-sand text-sm tracking-widest uppercase">Afternoon</span>
-            <h3 class="font-display text-2xl mt-1 mb-2">Explore or Rest</h3>
-            <p class="text-white/70 text-sm">Hike to nearby viewpoints, photograph the landscape, read, or simply sit and watch the light change.</p>
-          </div>
-        </div>
-
-        <div class="flex flex-col md:flex-row gap-6 items-start fade-up">
-          <div class="md:w-1/2 md:text-right md:pr-12">
-            <span class="text-sand text-sm tracking-widest uppercase">Sunset</span>
-            <h3 class="font-display text-2xl mt-1 mb-2">Golden Peaks</h3>
-            <p class="text-white/70 text-sm">The mountains turn warm and soft. The best time for photographs and quiet conversation.</p>
-          </div>
-          <div class="hidden md:flex w-8 h-8 rounded-full bg-sand items-center justify-center text-forest text-sm font-bold shrink-0 relative z-10">3</div>
-          <div class="md:w-1/2 md:pl-12"></div>
-        </div>
-
-        <div class="flex flex-col md:flex-row gap-6 items-start fade-up">
-          <div class="md:w-1/2 md:pr-12"></div>
-          <div class="hidden md:flex w-8 h-8 rounded-full bg-sand items-center justify-center text-forest text-sm font-bold shrink-0 relative z-10">4</div>
-          <div class="md:w-1/2 md:pl-12">
-            <span class="text-sand text-sm tracking-widest uppercase">Night</span>
-            <h3 class="font-display text-2xl mt-1 mb-2">Fire & Stars</h3>
-            <p class="text-white/70 text-sm">Gather around the bonfire. Share food, stories, and look up at a sky full of stars.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== GALLERY ===================== -->
-  <section id="gallery" class="section-padding bg-snow">
-    <div class="max-w-7xl mx-auto px-5 md:px-8">
-      <div class="text-center mb-12 fade-up">
-        <p class="text-sand tracking-widest text-xs uppercase mb-3">Visual Stories</p>
-        <h2 class="font-display text-4xl md:text-5xl text-charcoal">Gallery</h2>
-      </div>
-
-      <!-- Simple filter buttons -->
-      <div class="flex flex-wrap justify-center gap-3 mb-10 text-sm">
-        <button onclick="filterGallery('all')" class="gallery-filter px-4 py-2 rounded-full border border-stone/30 hover:bg-forest hover:text-white transition active">All</button>
-        <button onclick="filterGallery('camp')" class="gallery-filter px-4 py-2 rounded-full border border-stone/30 hover:bg-forest hover:text-white transition">Camp</button>
-        <button onclick="filterGallery('views')" class="gallery-filter px-4 py-2 rounded-full border border-stone/30 hover:bg-forest hover:text-white transition">Views</button>
-        <button onclick="filterGallery('activities')" class="gallery-filter px-4 py-2 rounded-full border border-stone/30 hover:bg-forest hover:text-white transition">Activities</button>
-      </div>
-
-      <div id="gallery-grid" class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
-        <!-- Images will be injected / filtered by JS. Using placeholders for now -->
-        <div class="gallery-item break-inside-avoid" data-category="views">
-          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Mountain peaks" class="w-full cursor-pointer hover:opacity-90 transition" onclick="openLightbox(this.src)" />
-        </div>
-        <div class="gallery-item break-inside-avoid" data-category="camp">
-          <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80" alt="Camping tent" class="w-full cursor-pointer hover:opacity-90 transition" onclick="openLightbox(this.src)" />
-        </div>
-        <div class="gallery-item break-inside-avoid" data-category="views">
-          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80" alt="Snow peaks" class="w-full cursor-pointer hover:opacity-90 transition" onclick="openLightbox(this.src)" />
-        </div>
-        <div class="gallery-item break-inside-avoid" data-category="activities">
-          <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=80" alt="Hiking" class="w-full cursor-pointer hover:opacity-90 transition" onclick="openLightbox(this.src)" />
-        </div>
-        <div class="gallery-item break-inside-avoid" data-category="camp">
-          <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=800&q=80" alt="Camp setup" class="w-full cursor-pointer hover:opacity-90 transition" onclick="openLightbox(this.src)" />
-        </div>
-        <div class="gallery-item break-inside-avoid" data-category="views">
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80" alt="Valley view" class="w-full cursor-pointer hover:opacity-90 transition" onclick="openLightbox(this.src)" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Lightbox -->
-  <div id="lightbox" class="fixed inset-0 z-[70] bg-black/95 hidden items-center justify-center" onclick="closeLightbox()">
-    <button class="absolute top-6 right-6 text-white text-3xl" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-    <img id="lightbox-img" src="" alt="" class="max-h-[90vh] max-w-[90vw] object-contain" />
-  </div>
-
-  <!-- ===================== PACKAGES ===================== -->
-  <section id="packages" class="section-padding bg-snow">
-    <div class="max-w-7xl mx-auto px-5 md:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-14 fade-up">
-        <p class="text-sand tracking-widest text-xs uppercase mb-3">Transparent Pricing</p>
-        <h2 class="font-display text-4xl md:text-5xl text-charcoal">Packages</h2>
-        <p class="mt-4 text-stone">Simple options. Clear inclusions. Easy to enquire.</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <article class="border border-stone/15 bg-white p-8 flex flex-col fade-up">
-          <h3 class="font-display text-2xl mb-2">Explorer</h3>
-          <p class="text-stone text-sm mb-6">Simple camping for travelers who want the essentials.</p>
-          <ul class="text-sm text-stone space-y-2 mb-8 flex-1">
-            <li>• Tent accommodation</li>
-            <li>• Basic facilities</li>
-            <li>• Selected meals available</li>
-          </ul>
-          <p class="text-2xl font-semibold text-forest mb-6">From PKR 5,500</p>
-          <a href="#" onclick="openWhatsApp('Hi, I am interested in the Explorer package at Miacher Kho. Please share availability.')" 
-             class="w-full text-center bg-forest text-white py-3.5 rounded-full font-medium hover:bg-mountain transition">
-            Choose Explorer
-          </a>
-        </article>
-
-        <article class="border-2 border-sand bg-white p-8 flex flex-col relative fade-up">
-          <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-sand text-forest text-xs font-semibold px-4 py-1 rounded-full">Most Popular</span>
-          <h3 class="font-display text-2xl mb-2">Mountain Experience</h3>
-          <p class="text-stone text-sm mb-6">A more complete stay with meals and activities.</p>
-          <ul class="text-sm text-stone space-y-2 mb-8 flex-1">
-            <li>• Better tent options</li>
-            <li>• Meals included</li>
-            <li>• Bonfire evenings</li>
-            <li>• Selected activities</li>
-          </ul>
-          <p class="text-2xl font-semibold text-forest mb-6">From PKR 9,500</p>
-          <a href="#" onclick="openWhatsApp('Hi, I am interested in the Mountain Experience package at Miacher Kho. Please share availability and details.')" 
-             class="w-full text-center bg-sand text-forest py-3.5 rounded-full font-semibold hover:bg-white border border-sand transition">
-            Choose This Package
-          </a>
-        </article>
-
-        <article class="border border-stone/15 bg-white p-8 flex flex-col fade-up">
-          <h3 class="font-display text-2xl mb-2">Private / Group</h3>
-          <p class="text-stone text-sm mb-6">Custom arrangements for families, friends and larger groups.</p>
-          <ul class="text-sm text-stone space-y-2 mb-8 flex-1">
-            <li>• Flexible group size</li>
-            <li>• Tailored activities</li>
-            <li>• Private arrangements</li>
-          </ul>
-          <p class="text-2xl font-semibold text-forest mb-6">Custom Pricing</p>
-          <a href="#" onclick="openWhatsApp('Hi, I would like to plan a private or group stay at Miacher Kho. Please share options.')" 
-             class="w-full text-center bg-forest text-white py-3.5 rounded-full font-medium hover:bg-mountain transition">
-            Plan My Trip
-          </a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== CUSTOM TRIP BUILDER ===================== -->
-  <section class="section-padding bg-forest text-white">
-    <div class="max-w-3xl mx-auto px-5 md:px-8">
-      <div class="text-center mb-12 fade-up">
-        <p class="text-sand tracking-widest text-xs uppercase mb-3">Build Your Stay</p>
-        <h2 class="font-display text-4xl md:text-5xl">Custom Trip Builder</h2>
-        <p class="mt-4 text-white/70">Tell us a few details and we will prepare a plan for you on WhatsApp.</p>
-      </div>
-
-      <div class="bg-white/5 border border-white/10 p-8 md:p-10 space-y-8 fade-up">
-        <div>
-          <label class="block text-sm mb-3 text-white/80">Number of Guests</label>
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            <button type="button" class="guest-btn border border-white/30 py-3 rounded-full hover:bg-sand hover:text-forest hover:border-sand transition" data-value="1-2">1–2</button>
-            <button type="button" class="guest-btn border border-white/30 py-3 rounded-full hover:bg-sand hover:text-forest hover:border-sand transition" data-value="3-5">3–5</button>
-            <button type="button" class="guest-btn border border-white/30 py-3 rounded-full hover:bg-sand hover:text-forest hover:border-sand transition" data-value="6-10">6–10</button>
-            <button type="button" class="guest-btn border border-white/30 py-3 rounded-full hover:bg-sand hover:text-forest hover:border-sand transition" data-value="10+">10+</button>
-          </div>
-        </div>
-
-        <div>
-          <label class="block text-sm mb-3 text-white/80">Type of Trip</label>
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            <button type="button" class="type-btn border border-white/30 py-3 rounded-full hover:bg-sand hover:text-forest hover:border-sand transition" data-value="Family">Family</button>
-            <button type="button" class="type-btn border border-white/30 py-3 rounded-full hover:bg-sand hover:text-forest hover:border-sand transition" data-value="Friends">Friends</button>
-            <button type="button" class="type-btn border border-white/30 py-3 rounded-full hover:bg-sand hover:text-forest hover:border-sand transition" data-value="Couple">Couple</button>
-            <button type="button" class="type-btn border border-white/30 py-3 rounded-full hover:bg-sand hover:text-forest hover:border-sand transition" data-value="Solo">Solo</button>
-            <button type="button" class="type-btn border border-white/30 py-3 rounded-full hover:bg-sand hover:text-forest hover:border-sand transition" data-value="Group">Group</button>
-            <button type="button" class="type-btn border border-white/30 py-3 rounded-full hover:bg-sand hover:text-forest hover:border-sand transition" data-value="Corporate">Corporate</button>
-          </div>
-        </div>
-
-        <div>
-          <label class="block text-sm mb-3 text-white/80">Preferred Experience</label>
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            <button type="button" class="exp-btn border border-white/30 py-3 rounded-full hover:bg-sand hover:text-forest hover:border-sand transition" data-value="Camping">Camping</button>
-            <button type="button" class="exp-btn border border-white/30 py-3 rounded-full hover:bg-sand hover:text-forest hover:border-sand transition" data-value="Photography">Photography</button>
-            <button type="button" class="exp-btn border border-white/30 py-3 rounded-full hover:bg-sand hover:text-forest hover:border-sand transition" data-value="Adventure">Adventure</button>
-            <button type="button" class="exp-btn border border-white/30 py-3 rounded-full hover:bg-sand hover:text-forest hover:border-sand transition" data-value="Relaxation">Relaxation</button>
-            <button type="button" class="exp-btn border border-white/30 py-3 rounded-full hover:bg-sand hover:text-forest hover:border-sand transition" data-value="Custom">Custom</button>
-          </div>
-        </div>
-
-        <button onclick="sendCustomPlan()" class="w-full bg-sand text-forest py-4 rounded-full font-semibold text-lg hover:bg-white transition">
-          Get My Custom Plan on WhatsApp
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== LOCATION ===================== -->
-  <section id="location" class="section-padding bg-snow">
-    <div class="max-w-7xl mx-auto px-5 md:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-14 fade-up">
-        <p class="text-sand tracking-widest text-xs uppercase mb-3">How to Get Here</p>
-        <h2 class="font-display text-4xl md:text-5xl text-charcoal">Location & Access</h2>
-      </div>
-
-      <div class="grid lg:grid-cols-2 gap-12 items-start">
-        <div class="space-y-8 fade-up">
-          <div class="flex gap-5">
-            <div class="w-10 h-10 rounded-full bg-forest text-white flex items-center justify-center shrink-0 font-semibold">1</div>
-            <div>
-              <h4 class="font-semibold text-lg">Reach Gilgit-Baltistan</h4>
-              <p class="text-stone text-sm mt-1">Fly to Gilgit or travel by road via the Karakoram Highway.</p>
-            </div>
-          </div>
-          <div class="flex gap-5">
-            <div class="w-10 h-10 rounded-full bg-forest text-white flex items-center justify-center shrink-0 font-semibold">2</div>
-            <div>
-              <h4 class="font-semibold text-lg">Travel toward Nagar Valley</h4>
-              <p class="text-stone text-sm mt-1">Continue along the scenic route through the mountains.</p>
-            </div>
-          </div>
-          <div class="flex gap-5">
-            <div class="w-10 h-10 rounded-full bg-forest text-white flex items-center justify-center shrink-0 font-semibold">3</div>
-            <div>
-              <h4 class="font-semibold text-lg">Final approach to Miacher Kho</h4>
-              <p class="text-stone text-sm mt-1">The last stretch may require a suitable vehicle (4x4 recommended depending on conditions). We can guide you on pickup options.</p>
-            </div>
-          </div>
-
-          <div class="bg-white border border-stone/10 p-6 text-sm space-y-2">
-            <p><strong>Road conditions:</strong> Mountain roads — check seasonal status</p>
-            <p><strong>Recommended vehicle:</strong> 4x4 advised for comfort and safety</p>
-            <p><strong>Mobile network:</strong> Limited coverage on site</p>
-            <p class="text-stone pt-2">Exact coordinates and pickup details will be shared after enquiry.</p>
-          </div>
-
-          <a href="#" id="directions-btn" onclick="window.open(CONFIG.mapsLink, '_blank')" 
-             class="inline-flex items-center gap-2 bg-forest text-white px-6 py-3 rounded-full font-medium hover:bg-mountain transition">
-            <i class="fa-solid fa-location-arrow"></i> Get Directions
-          </a>
-        </div>
-
-        <div class="fade-up h-80 lg:h-full min-h-[320px] bg-stone/10 flex items-center justify-center border border-stone/10">
-          <div class="text-center text-stone">
-            <i class="fa-solid fa-map-location-dot text-4xl mb-3 text-forest"></i>
-            <p class="font-medium">Interactive Map</p>
-            <p class="text-sm mt-1">Replace with Google Maps embed of exact campsite location</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== BEST TIME ===================== -->
-  <section class="section-padding bg-charcoal text-white">
-    <div class="max-w-7xl mx-auto px-5 md:px-8">
-      <div class="text-center mb-14 fade-up">
-        <p class="text-sand tracking-widest text-xs uppercase mb-3">When to Come</p>
-        <h2 class="font-display text-4xl md:text-5xl">Best Time to Visit</h2>
-        <p class="mt-4 text-white/60 text-sm">Confirm current access with us before travel — conditions change with the seasons.</p>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 fade-up">
-        <div class="border border-white/15 p-6">
-          <h3 class="font-display text-xl text-sand mb-2">Spring</h3>
-          <p class="text-white/70 text-sm">Green landscapes and pleasant temperatures. Excellent for photography and comfortable camping.</p>
-        </div>
-        <div class="border border-white/15 p-6">
-          <h3 class="font-display text-xl text-sand mb-2">Summer</h3>
-          <p class="text-white/70 text-sm">Peak season. Warm days, clear skies, and the most reliable access for most visitors.</p>
-        </div>
-        <div class="border border-white/15 p-6">
-          <h3 class="font-display text-xl text-sand mb-2">Autumn</h3>
-          <p class="text-white/70 text-sm">Golden light and dramatic colors. One of the most beautiful times for photography.</p>
-        </div>
-        <div class="border border-white/15 p-6">
-          <h3 class="font-display text-xl text-sand mb-2">Winter</h3>
-          <p class="text-white/70 text-sm">Limited access depending on weather and road conditions. Contact us before planning.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== REVIEWS ===================== -->
-  <section id="reviews" class="section-padding bg-snow">
-    <div class="max-w-7xl mx-auto px-5 md:px-8">
-      <div class="text-center mb-14 fade-up">
-        <p class="text-sand tracking-widest text-xs uppercase mb-3">From Our Guests</p>
-        <h2 class="font-display text-4xl md:text-5xl text-charcoal">Stories From the Mountains</h2>
-        <p class="mt-3 text-stone text-sm">Real reviews will be added once available. Do not use invented testimonials.</p>
-      </div>
-      <div class="grid md:grid-cols-3 gap-8">
-        <blockquote class="bg-white border border-stone/10 p-8 fade-up">
-          <div class="flex text-sand mb-4">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-          </div>
-          <p class="text-stone leading-relaxed mb-6">“Waking up to Rakaposhi from the tent is something you never forget. Quiet, beautiful, and exactly what we needed.”</p>
-          <footer class="text-sm font-medium">— Guest from Islamabad</footer>
-        </blockquote>
-        <blockquote class="bg-white border border-stone/10 p-8 fade-up">
-          <div class="flex text-sand mb-4">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-          </div>
-          <p class="text-stone leading-relaxed mb-6">“The bonfire nights and the views made our group trip special. Simple camping done right.”</p>
-          <footer class="text-sm font-medium">— University group, Lahore</footer>
-        </blockquote>
-        <blockquote class="bg-white border border-stone/10 p-8 fade-up">
-          <div class="flex text-sand mb-4">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-          </div>
-          <p class="text-stone leading-relaxed mb-6">“Clear communication, helpful with the last stretch of the road, and an unforgettable setting.”</p>
-          <footer class="text-sm font-medium">— Traveler from Karachi</footer>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== FAQ ===================== -->
-  <section id="faq" class="section-padding bg-snow">
-    <div class="max-w-3xl mx-auto px-5 md:px-8">
-      <div class="text-center mb-12 fade-up">
-        <p class="text-sand tracking-widest text-xs uppercase mb-3">Common Questions</p>
-        <h2 class="font-display text-4xl md:text-5xl text-charcoal">FAQ</h2>
-      </div>
-
-      <div class="space-y-3 fade-up" id="faq-list">
-        <!-- FAQ items injected by JS for cleanliness -->
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== CONTACT ===================== -->
-  <section id="contact" class="section-padding bg-forest text-white">
-    <div class="max-w-4xl mx-auto px-5 md:px-8 text-center">
-      <h2 class="font-display text-4xl md:text-5xl mb-4 fade-up">Your Mountain Escape Starts Here</h2>
-      <p class="text-white/75 text-lg mb-12 max-w-xl mx-auto fade-up">Choose your dates, bring your people, and let us help you plan your stay at Miacher Kho.</p>
-
-      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16 fade-up">
-        <a href="#" onclick="openWhatsApp('Hi, I would like to book a stay at Miacher Kho. Please share available dates and packages.')" 
-           class="inline-flex items-center justify-center gap-3 bg-sand text-forest px-8 py-4 rounded-full font-semibold text-lg hover:bg-white transition">
-          <i class="fa-brands fa-whatsapp text-xl"></i> Chat on WhatsApp
-        </a>
-        <a href="tel:+923001234567" class="inline-flex items-center justify-center gap-3 border border-white/40 px-8 py-4 rounded-full font-medium hover:bg-white/10 transition">
-          <i class="fa-solid fa-phone"></i> Call Us
-        </a>
-      </div>
-
-      <!-- Simple contact form -->
-      <div class="bg-white/5 border border-white/10 p-8 md:p-10 text-left max-w-xl mx-auto fade-up">
-        <form id="contact-form" onsubmit="handleForm(event)">
-          <div class="grid sm:grid-cols-2 gap-5 mb-5">
-            <div>
-              <label class="block text-sm text-white/70 mb-1.5">Name</label>
-              <input type="text" required class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-sand" placeholder="Your name" />
-            </div>
-            <div>
-              <label class="block text-sm text-white/70 mb-1.5">Phone or Email</label>
-              <input type="text" required class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-sand" placeholder="Contact detail" />
-            </div>
-          </div>
-          <div class="grid sm:grid-cols-2 gap-5 mb-5">
-            <div>
-              <label class="block text-sm text-white/70 mb-1.5">Preferred Dates</label>
-              <input type="text" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-sand" placeholder="e.g. 15–18 Aug" />
-            </div>
-            <div>
-              <label class="block text-sm text-white/70 mb-1.5">Number of Guests</label>
-              <input type="number" min="1" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-sand" placeholder="2" />
-            </div>
-          </div>
-          <div class="mb-6">
-            <label class="block text-sm text-white/70 mb-1.5">Message</label>
-            <textarea rows="3" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:border-sand" placeholder="Tell us a little about your plans..."></textarea>
-          </div>
-          <button type="submit" class="w-full bg-sand text-forest py-3.5 rounded-full font-semibold hover:bg-white transition">
-            Send Enquiry
-          </button>
-          <p id="form-success" class="hidden mt-4 text-center text-sand text-sm">Thank you. We will get back to you shortly. You can also message us directly on WhatsApp.</p>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="bg-charcoal text-white/80 py-16">
-    <div class="max-w-7xl mx-auto px-5 md:px-8">
-      <div class="grid md:grid-cols-3 gap-10 mb-12">
-        <div>
-          <p class="font-display text-2xl text-white mb-3">Miacher Kho</p>
-          <p class="text-sm leading-relaxed">Camping & Nature Retreat<br />Nagar Valley, Gilgit-Baltistan</p>
-        </div>
-        <div>
-          <p class="text-white font-medium mb-3">Explore</p>
-          <div class="flex flex-col gap-2 text-sm">
-            <a href="#stay" class="hover:text-sand">Stay</a>
-            <a href="#packages" class="hover:text-sand">Packages</a>
-            <a href="#gallery" class="hover:text-sand">Gallery</a>
-            <a href="#location" class="hover:text-sand">Location</a>
-            <a href="#faq" class="hover:text-sand">FAQ</a>
-          </div>
-        </div>
-        <div>
-          <p class="text-white font-medium mb-3">Contact</p>
-          <div class="text-sm space-y-2">
-            <p><a href="tel:+923001234567" class="hover:text-sand">+92 300 1234567</a></p>
-            <p><a href="mailto:hello@miacherkho.com" class="hover:text-sand">hello@miacherkho.com</a></p>
-            <div class="flex gap-4 pt-2">
-              <a href="#" id="footer-wa" onclick="openWhatsApp('Hi, I found Miacher Kho online and would like more information.')" class="hover:text-sand"><i class="fa-brands fa-whatsapp text-xl"></i></a>
-              <a href="#" class="hover:text-sand"><i class="fa-brands fa-instagram text-xl"></i></a>
-              <a href="#" class="hover:text-sand"><i class="fa-brands fa-facebook text-xl"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/50">
-        <p>© 2026 Miacher Kho Camping & Nature Retreat. All rights reserved.</p>
-        <a href="#home" class="hover:text-sand">Back to Top ↑</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ===================== STICKY MOBILE BOOKING BAR ===================== -->
-  <div class="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-forest text-white sticky-bar border-t border-white/10">
-    <div class="grid grid-cols-3 divide-x divide-white/15">
-      <a href="tel:+923001234567" class="flex flex-col items-center justify-center py-3.5 text-xs gap-1">
-        <i class="fa-solid fa-phone text-lg"></i>
-        <span>Call</span>
-      </a>
-      <a href="#" onclick="openWhatsApp('Hi, I am interested in staying at Miacher Kho. Please share details.')" 
-         class="flex flex-col items-center justify-center py-3.5 text-xs gap-1 bg-sand text-forest font-semibold">
-        <i class="fa-brands fa-whatsapp text-lg"></i>
-        <span>WhatsApp</span>
-      </a>
-      <a href="#packages" class="flex flex-col items-center justify-center py-3.5 text-xs gap-1">
-        <i class="fa-solid fa-calendar-check text-lg"></i>
-        <span>Book Stay</span>
-      </a>
+    <div class="flex items-center gap-3">
+      <a href="#" onclick="openWA('Hi, I would like to book a stay at Miacher Kho.')" class="hidden md:inline-flex bg-sand text-forest px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-white transition">Book Your Stay</a>
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('translate-x-full')" class="lg:hidden text-white text-2xl p-2" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
     </div>
   </div>
+</header>
 
-  <!-- Spacer for sticky bar on mobile -->
-  <div class="h-16 md:hidden"></div>
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="fixed inset-0 z-[60] bg-forest text-white translate-x-full transition-transform duration-300 lg:hidden">
+  <div class="flex justify-between items-center p-6">
+    <span class="font-display text-2xl">Miacher Kho</span>
+    <button onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')" class="text-3xl"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="flex flex-col px-8 pt-8 space-y-5 text-xl">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="stay.html">Stay</a>
+    <a href="experiences.html">Experiences</a>
+    <a href="packages.html">Packages</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="location.html">Location</a>
+    <a href="best-time.html">Best Time</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="#" onclick="openWA('Hi, I would like to book a stay at Miacher Kho.')" class="mt-6 inline-flex items-center justify-center gap-3 bg-sand text-forest py-4 rounded-full font-semibold"><i class="fa-brands fa-whatsapp"></i> Book via WhatsApp</a>
+  </nav>
+</div>
 
-  <!-- ===================== SCRIPTS ===================== -->
-  <script>
-    // ---------- Mobile Menu ----------
-    function toggleMenu() {
-      const menu = document.getElementById('mobile-menu');
-      menu.classList.toggle('translate-x-full');
+<!-- HERO -->
+<section class="relative h-screen min-h-[620px] flex items-end md:items-center">
+  <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=80" alt="Karakoram mountains" class="absolute inset-0 w-full h-full object-cover" />
+  <div class="absolute inset-0 hero-overlay"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8 pb-24 md:pb-0 w-full">
+    <p class="text-sand tracking-[0.2em] text-xs md:text-sm uppercase mb-4">Nagar Valley • Gilgit-Baltistan</p>
+    <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.1] max-w-3xl mb-6">Camp in the Heart of the Karakoram</h1>
+    <p class="text-white/85 text-lg md:text-xl max-w-xl mb-10">Peaceful mountain camping, Rakaposhi views, star-filled nights and the quiet beauty of Nagar Valley.</p>
+    <div class="flex flex-col sm:flex-row gap-4">
+      <a href="packages.html" class="inline-flex items-center justify-center bg-sand text-forest px-8 py-4 rounded-full font-semibold hover:bg-white transition">Plan Your Stay</a>
+      <a href="about.html" class="inline-flex items-center justify-center border border-white/50 text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition">Explore Miacher Kho</a>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="bg-forest text-white py-16 md:py-20">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center md:text-left">
+      <div>
+        <i class="fa-solid fa-mountain text-sand text-2xl mb-3"></i>
+        <h3 class="font-display text-lg mb-1">Rakaposhi Views</h3>
+        <p class="text-white/60 text-sm">Wake up to iconic peaks</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-campground text-sand text-2xl mb-3"></i>
+        <h3 class="font-display text-lg mb-1">Mountain Camping</h3>
+        <p class="text-white/60 text-sm">Authentic outdoor stay</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-star text-sand text-2xl mb-3"></i>
+        <h3 class="font-display text-lg mb-1">Stargazing</h3>
+        <p class="text-white/60 text-sm">Clear mountain skies</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-fire text-sand text-2xl mb-3"></i>
+        <h3 class="font-display text-lg mb-1">Bonfire Nights</h3>
+        <p class="text-white/60 text-sm">Stories under the stars</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-hand-holding-heart text-sand text-2xl mb-3"></i>
+        <h3 class="font-display text-lg mb-1">Local Hospitality</h3>
+        <p class="text-white/60 text-sm">Warm Nagar culture</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT PREVIEW -->
+<section class="py-20 md:py-28 bg-snow">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <p class="text-sand tracking-widest text-xs uppercase mb-3">The Place</p>
+      <h2 class="font-display text-4xl md:text-5xl mb-6">A quiet corner of Nagar Valley</h2>
+      <p class="text-stone leading-relaxed mb-6">Miacher Kho is a carefully chosen campsite high above the valley, looking out toward Rakaposhi and the surrounding Karakoram. It is a place for silence, mountain light, and simple outdoor living.</p>
+      <a href="about.html" class="inline-flex items-center gap-2 text-forest font-semibold border-b border-forest pb-0.5 hover:text-mountain">Read our story <i class="fa-solid fa-arrow-right text-xs"></i></a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=900&q=80" alt="Mountain landscape" class="w-full h-80 md:h-96 object-cover" />
+  </div>
+</section>
+
+<!-- STAY PREVIEW -->
+<section class="py-20 md:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <p class="text-sand tracking-widest text-xs uppercase mb-3">Accommodation</p>
+      <h2 class="font-display text-4xl md:text-5xl">Stay Your Way</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <a href="stay.html" class="group block border border-stone/10 overflow-hidden hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=700&q=80" alt="Standard tent" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500" />
+        <div class="p-6">
+          <h3 class="font-display text-xl mb-2">Standard Camping</h3>
+          <p class="text-stone text-sm">Simple and authentic</p>
+        </div>
+      </a>
+      <a href="stay.html" class="group block border border-stone/10 overflow-hidden hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=700&q=80" alt="Premium tent" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500" />
+        <div class="p-6">
+          <h3 class="font-display text-xl mb-2">Premium Camping</h3>
+          <p class="text-stone text-sm">Extra comfort under the peaks</p>
+        </div>
+      </a>
+      <a href="stay.html" class="group block border border-stone/10 overflow-hidden hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=700&q=80" alt="Group camping" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500" />
+        <div class="p-6">
+          <h3 class="font-display text-xl mb-2">Group Camping</h3>
+          <p class="text-stone text-sm">Friends, universities & teams</p>
+        </div>
+      </a>
+    </div>
+    <div class="text-center mt-10">
+      <a href="stay.html" class="inline-flex items-center gap-2 text-forest font-semibold border-b border-forest">View all accommodation <i class="fa-solid fa-arrow-right text-xs"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCES PREVIEW -->
+<section class="py-20 md:py-28 bg-snow">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <p class="text-sand tracking-widest text-xs uppercase mb-3">What You Can Do</p>
+      <h2 class="font-display text-4xl md:text-5xl">Experiences</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white p-6 border border-stone/10">
+        <i class="fa-solid fa-person-hiking text-sand text-2xl mb-3"></i>
+        <h3 class="font-display text-lg mb-1">Hiking</h3>
+        <p class="text-stone text-sm">Viewpoint walks around the camp</p>
+      </div>
+      <div class="bg-white p-6 border border-stone/10">
+        <i class="fa-solid fa-star text-sand text-2xl mb-3"></i>
+        <h3 class="font-display text-lg mb-1">Stargazing</h3>
+        <p class="text-stone text-sm">Clear skies away from city lights</p>
+      </div>
+      <div class="bg-white p-6 border border-stone/10">
+        <i class="fa-solid fa-fire text-sand text-2xl mb-3"></i>
+        <h3 class="font-display text-lg mb-1">Bonfire</h3>
+        <p class="text-stone text-sm">Evenings around the fire</p>
+      </div>
+      <div class="bg-white p-6 border border-stone/10">
+        <i class="fa-solid fa-camera text-sand text-2xl mb-3"></i>
+        <h3 class="font-display text-lg mb-1">Photography</h3>
+        <p class="text-stone text-sm">Sunrise, sunset & peaks</p>
+      </div>
+    </div>
+    <div class="text-center mt-10">
+      <a href="experiences.html" class="inline-flex items-center gap-2 text-forest font-semibold border-b border-forest">Explore all experiences <i class="fa-solid fa-arrow-right text-xs"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES PREVIEW -->
+<section class="py-20 md:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 text-center">
+    <p class="text-sand tracking-widest text-xs uppercase mb-3">Simple Options</p>
+    <h2 class="font-display text-4xl md:text-5xl mb-6">Packages</h2>
+    <p class="text-stone max-w-xl mx-auto mb-10">Clear choices for different kinds of travelers. Full details and pricing available on enquiry.</p>
+    <a href="packages.html" class="inline-flex items-center justify-center bg-forest text-white px-8 py-4 rounded-full font-semibold hover:bg-mountain transition">View Packages</a>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="py-20 md:py-28 bg-forest text-white text-center">
+  <div class="max-w-3xl mx-auto px-5">
+    <h2 class="font-display text-4xl md:text-5xl mb-4">Ready for the mountains?</h2>
+    <p class="text-white/75 mb-10">Check availability and plan your stay with us on WhatsApp.</p>
+    <a href="#" onclick="openWA('Hi, I would like to check availability at Miacher Kho. Please share available dates and packages.')" class="inline-flex items-center gap-3 bg-sand text-forest px-8 py-4 rounded-full font-semibold text-lg hover:bg-white transition">
+      <i class="fa-brands fa-whatsapp text-xl"></i> Chat on WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-charcoal text-white/70 py-14">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid md:grid-cols-3 gap-10">
+    <div>
+      <p class="font-display text-2xl text-white mb-2">Miacher Kho</p>
+      <p class="text-sm">Camping & Nature Retreat<br>Nagar Valley, Gilgit-Baltistan</p>
+    </div>
+    <div class="text-sm space-y-2">
+      <a href="about.html" class="block hover:text-sand">About</a>
+      <a href="stay.html" class="block hover:text-sand">Stay</a>
+      <a href="packages.html" class="block hover:text-sand">Packages</a>
+      <a href="gallery.html" class="block hover:text-sand">Gallery</a>
+      <a href="location.html" class="block hover:text-sand">Location</a>
+      <a href="contact.html" class="block hover:text-sand">Contact</a>
+    </div>
+    <div class="text-sm space-y-2">
+      <p><a href="tel:+923001234567" class="hover:text-sand">+92 300 1234567</a></p>
+      <p><a href="mailto:hello@miacherkho.com" class="hover:text-sand">hello@miacherkho.com</a></p>
+      <div class="flex gap-4 pt-2">
+        <a href="#" onclick="openWA('Hi, I found Miacher Kho online.')" class="hover:text-sand"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+        <a href="#" class="hover:text-sand"><i class="fa-brands fa-instagram text-xl"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-5 md:px-8 mt-10 pt-8 border-t border-white/10 text-xs text-white/40">
+    © 2026 Miacher Kho Camping & Nature Retreat
+  </div>
+</footer>
+
+<!-- STICKY MOBILE BAR -->
+<div class="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-forest text-white sticky-bar border-t border-white/10">
+  <div class="grid grid-cols-3 divide-x divide-white/15">
+    <a href="tel:+923001234567" class="flex flex-col items-center py-3.5 text-xs gap-1"><i class="fa-solid fa-phone text-lg"></i>Call</a>
+    <a href="#" onclick="openWA('Hi, I am interested in Miacher Kho.')" class="flex flex-col items-center py-3.5 text-xs gap-1 bg-sand text-forest font-semibold"><i class="fa-brands fa-whatsapp text-lg"></i>WhatsApp</a>
+    <a href="packages.html" class="flex flex-col items-center py-3.5 text-xs gap-1"><i class="fa-solid fa-calendar-check text-lg"></i>Book</a>
+  </div>
+</div>
+<div class="h-16 md:hidden"></div>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      navbar.classList.add('bg-forest/95', 'backdrop-blur-md', 'shadow-lg');
+      navbar.classList.remove('bg-transparent');
+    } else {
+      navbar.classList.remove('bg-forest/95', 'backdrop-blur-md', 'shadow-lg');
+      navbar.classList.add('bg-transparent');
     }
-
-    // ---------- WhatsApp Helper ----------
-    function openWhatsApp(message) {
-      window.open(waLink(message), '_blank');
-    }
-
-    // ---------- Navbar scroll effect ----------
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 80) {
-        navbar.classList.add('bg-forest/95', 'backdrop-blur-md', 'shadow-lg');
-        navbar.classList.remove('bg-transparent');
-      } else {
-        navbar.classList.remove('bg-forest/95', 'backdrop-blur-md', 'shadow-lg');
-        navbar.classList.add('bg-transparent');
-      }
-    });
-
-    // ---------- Fade-up on scroll ----------
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-    // ---------- Gallery filter ----------
-    function filterGallery(cat) {
-      document.querySelectorAll('.gallery-filter').forEach(b => b.classList.remove('bg-forest', 'text-white'));
-      event.target.classList.add('bg-forest', 'text-white');
-      document.querySelectorAll('.gallery-item').forEach(item => {
-        if (cat === 'all' || item.dataset.category === cat) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    }
-
-    // ---------- Lightbox ----------
-    function openLightbox(src) {
-      const lb = document.getElementById('lightbox');
-      document.getElementById('lightbox-img').src = src;
-      lb.classList.remove('hidden');
-      lb.classList.add('flex');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeLightbox() {
-      const lb = document.getElementById('lightbox');
-      lb.classList.add('hidden');
-      lb.classList.remove('flex');
-      document.body.style.overflow = '';
-    }
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
-
-    // ---------- Custom Trip Builder ----------
-    let selectedGuests = '', selectedType = '', selectedExp = '';
-    document.querySelectorAll('.guest-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.guest-btn').forEach(b => b.classList.remove('bg-sand', 'text-forest', 'border-sand'));
-        btn.classList.add('bg-sand', 'text-forest', 'border-sand');
-        selectedGuests = btn.dataset.value;
-      });
-    });
-    document.querySelectorAll('.type-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.type-btn').forEach(b => b.classList.remove('bg-sand', 'text-forest', 'border-sand'));
-        btn.classList.add('bg-sand', 'text-forest', 'border-sand');
-        selectedType = btn.dataset.value;
-      });
-    });
-    document.querySelectorAll('.exp-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.exp-btn').forEach(b => b.classList.remove('bg-sand', 'text-forest', 'border-sand'));
-        btn.classList.add('bg-sand', 'text-forest', 'border-sand');
-        selectedExp = btn.dataset.value;
-      });
-    });
-
-    function sendCustomPlan() {
-      let msg = 'Hi, I would like to plan a custom camping experience at Miacher Kho.';
-      if (selectedGuests) msg += ` Guests: ${selectedGuests}.`;
-      if (selectedType) msg += ` Trip type: ${selectedType}.`;
-      if (selectedExp) msg += ` Preferred experience: ${selectedExp}.`;
-      msg += ' Please share available options and pricing.';
-      openWhatsApp(msg);
-    }
-
-    // ---------- FAQ Accordion ----------
-    const faqs = [
-      { q: 'What is the best time to visit Miacher Kho?', a: 'Spring through autumn generally offers the best conditions. Summer is peak season. Always confirm current access with us before travel.' },
-      { q: 'How do I reach the campsite?', a: 'Reach Gilgit-Baltistan by air or via the Karakoram Highway, then continue toward Nagar Valley. The final approach may require a suitable vehicle. We provide guidance after enquiry.' },
-      { q: 'Do I need a 4x4 vehicle?', a: 'A 4x4 is often recommended depending on road conditions and the season. We can advise based on your travel dates.' },
-      { q: 'What is included in the camping packages?', a: 'Inclusions vary by package. Explorer covers basic tent stay. Mountain Experience typically includes better accommodation, meals and selected activities. Full details are shared on enquiry.' },
-      { q: 'Are meals available?', a: 'Yes. Local meals can be arranged. Some packages include meals; others offer them on request.' },
-      { q: 'Are washrooms available?', a: 'Basic clean washroom facilities are available on site.' },
-      { q: 'Is electricity available?', a: 'Limited solar power is available. Please charge essential devices before arrival and manage expectations for continuous power.' },
-      { q: 'Is there mobile network coverage?', a: 'Coverage is limited. Do not rely on constant connectivity.' },
-      { q: 'Can families and children visit?', a: 'Yes. Families are welcome. Please inform us about children so we can advise on the most suitable arrangements.' },
-      { q: 'What should I pack?', a: 'Warm layers, comfortable walking shoes, personal toiletries, power bank, flashlight/headlamp, and any personal medication. Nights can be cool even in summer.' },
-      { q: 'What payment methods are accepted?', a: 'Details will be shared during the booking process. Common options in the region include cash and bank transfer.' }
-    ];
-
-    const faqList = document.getElementById('faq-list');
-    faqs.forEach((item, i) => {
-      const div = document.createElement('div');
-      div.className = 'border border-stone/15 bg-white';
-      div.innerHTML = `
-        <button class="w-full flex justify-between items-center px-5 py-4 text-left font-medium hover:bg-snow/80 transition" onclick="toggleFaq(${i})">
-          <span>${item.q}</span>
-          <i class="fa-solid fa-chevron-down text-stone text-sm transition-transform" id="faq-icon-${i}"></i>
-        </button>
-        <div class="accordion-content px-5" id="faq-content-${i}">
-          <p class="pb-4 text-stone text-sm leading-relaxed">${item.a}</p>
-        </div>`;
-      faqList.appendChild(div);
-    });
-
-    function toggleFaq(index) {
-      const content = document.getElementById(`faq-content-${index}`);
-      const icon = document.getElementById(`faq-icon-${index}`);
-      const isOpen = content.classList.contains('open');
-      // Close all
-      document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
-      document.querySelectorAll('[id^=faq-icon]').forEach(ic => ic.style.transform = '');
-      if (!isOpen) {
-        content.classList.add('open');
-        icon.style.transform = 'rotate(180deg)';
-      }
-    }
-
-    // ---------- Contact Form ----------
-    function handleForm(e) {
-      e.preventDefault();
-      document.getElementById('form-success').classList.remove('hidden');
-      // Optionally also open WhatsApp with form data
-      setTimeout(() => {
-        openWhatsApp('Hi, I just submitted an enquiry form on the Miacher Kho website. Looking forward to hearing from you.');
-      }, 800);
-    }
-  </script>
+  });
+</script>
 </body>
 </html>

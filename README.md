@@ -1,56 +1,61 @@
 # Miacher Kho Camping & Nature Retreat
 
-**Location:** Nagar Valley, Gilgit-Baltistan, Pakistan  
-**Type:** Premium Camping & Nature Retreat Website (Version 2.0)
+Premium multi-page website for Miacher Kho Camping & Nature Retreat  
+**Location:** Nagar Valley, Gilgit-Baltistan, Pakistan
 
-A cinematic, mobile-first, conversion-focused website designed to turn visitors into WhatsApp booking enquiries.
+## Deploy on Netlify (Recommended)
 
-## Live Preview
-Open `index.html` in any modern browser or enable GitHub Pages.
+1. Go to [Netlify](https://app.netlify.com)
+2. Drag & drop this entire folder **or** connect this GitHub repository
+3. Publish directory: leave as root (`.`) 
+4. Deploy
 
-## Features Implemented
-- Full-viewport cinematic hero with fallback image
-- Experience highlights
-- Editorial introduction / story section
-- Accommodation cards (Standard, Deluxe, Group)
-- Facilities at a glance
-- Activities with alternating layout
-- “A Day at Miacher Kho” timeline
-- Masonry-style gallery + lightbox
-- Transparent packages & pricing
-- Custom trip builder (generates WhatsApp message)
-- How to reach + map placeholder
-- Best time to visit
-- Guest reviews section
-- FAQ accordion
-- Strong contact / booking section
-- Sticky mobile booking bar (Call | WhatsApp | Book)
-- Pre-filled WhatsApp messages for every CTA
-- Natural color palette & premium typography
+No build command needed. Pure static HTML.
+
+## Pages
+
+| Page | File |
+|------|------|
+| Home | `index.html` |
+| About | `about.html` |
+| Stay | `stay.html` |
+| Experiences | `experiences.html` |
+| Packages | `packages.html` |
+| Gallery | `gallery.html` |
+| Location & Travel Guide | `location.html` |
+| Best Time to Visit | `best-time.html` |
+| Reviews | `reviews.html` |
+| FAQ | `faq.html` |
+| Contact / Book | `contact.html` |
+
+## Easy Configuration
+
+Open any page and find the `CONFIG` object near the top of the `<script>` section to update:
+
+- WhatsApp number
+- Phone number
+- Email
+- Social links
+- Maps link
+
+## Features
+
 - Mobile-first responsive design
-- Accessibility basics (semantic HTML, focus states, alt texts)
+- Cinematic premium aesthetic
+- Sticky mobile booking bar (Call | WhatsApp | Book)
+- Pre-filled WhatsApp messages on every important CTA
+- Transparent packages
+- Gallery with lightbox
+- FAQ accordion
+- Consistent navigation & design system across all pages
+- SEO-friendly meta tags
 
-## Tech Stack
-- Pure HTML5 + Tailwind CSS (CDN)
-- Vanilla JavaScript
-- Google Fonts (Playfair Display + Inter)
-- Font Awesome icons
+## Notes for Owner
 
-## How to Update Content
-All important business data (WhatsApp number, prices, packages, FAQs, etc.) is centralized near the top of `index.html` inside the `CONFIG` and content objects so the owner can update without digging through the whole file.
-
-## Next Steps for Owner
-1. Replace placeholder images with real high-resolution photos of Miacher Kho, tents, Rakaposhi views, food, activities.
-2. Update the WhatsApp number, phone number, email, and exact prices.
-3. Add authentic guest reviews.
-4. Confirm seasonal access information.
-5. Provide Google Maps embed link / coordinates.
-6. Optionally add a short cinematic video.
-
-## Deployment
-- GitHub Pages
-- Netlify / Vercel (drag & drop `index.html`)
-- Any static host
+- Replace placeholder images with real Miacher Kho photography
+- Update prices, facilities, and seasonal information with accurate data
+- Add real guest reviews only
+- Confirm all travel/access details before publishing
 
 ---
-Built according to the full Advanced Website UI/UX & Development Specification v2.0.
+Built according to the AI Website Development Prompt for Miacher Kho.
