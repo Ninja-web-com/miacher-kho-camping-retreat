@@ -1,61 +1,50 @@
 # Miacher Kho Camping & Nature Retreat
 
-Premium multi-page website for Miacher Kho Camping & Nature Retreat  
+Modern React rewrite of the premium multi-page website for Miacher Kho Camping & Nature Retreat  
 **Location:** Nagar Valley, Gilgit-Baltistan, Pakistan
 
-## Deploy on Netlify (Recommended)
+## Stack
 
-1. Go to [Netlify](https://app.netlify.com)
-2. Drag & drop this entire folder **or** connect this GitHub repository
-3. Publish directory: leave as root (`.`) 
-4. Deploy
+- Vite + React 19 + TypeScript
+- React Router
+- Tailwind CSS v4 (exact brand colors)
+- Font Awesome + Google Fonts (Playfair Display + Inter)
 
-No build command needed. Pure static HTML.
+## Changes from original static site
 
-## Pages
+- Completely removed Packages page, navigation, and all related CTAs
+- Removed “Plan Your Trip” as a primary nav concept
+- Added new **Services** page (`/services`) combining Stay options + Experiences + Support
+- Clean component architecture
+- Central CONFIG for WhatsApp / phone / email / maps
+- Mobile sticky booking bar retained
+- Same cinematic, honest brand voice
 
-| Page | File |
-|------|------|
-| Home | `index.html` |
-| About | `about.html` |
-| Stay | `stay.html` |
-| Experiences | `experiences.html` |
-| Packages | `packages.html` |
-| Gallery | `gallery.html` |
-| Location & Travel Guide | `location.html` |
-| Best Time to Visit | `best-time.html` |
-| Reviews | `reviews.html` |
-| FAQ | `faq.html` |
-| Contact / Book | `contact.html` |
+## Navigation
 
-## Easy Configuration
+Home · About · Stay · Services · Gallery · Location · Reviews · Contact  
+(Best Time & FAQ accessible from mobile menu)
 
-Open any page and find the `CONFIG` object near the top of the `<script>` section to update:
+## Quick start
 
-- WhatsApp number
-- Phone number
-- Email
-- Social links
-- Maps link
+```bash
+npm install
+npm run dev
+```
 
-## Features
+## Deploy
 
-- Mobile-first responsive design
-- Cinematic premium aesthetic
-- Sticky mobile booking bar (Call | WhatsApp | Book)
-- Pre-filled WhatsApp messages on every important CTA
-- Transparent packages
-- Gallery with lightbox
-- FAQ accordion
-- Consistent navigation & design system across all pages
-- SEO-friendly meta tags
+Any static host works (Netlify, Vercel, Cloudflare Pages).  
+Build command: `npm run build`  
+Publish directory: `dist`
+
+## Configuration
+
+Edit `src/lib/config.ts` to update WhatsApp number, phone, email and maps link.
 
 ## Notes for Owner
 
-- Replace placeholder images with real Miacher Kho photography
-- Update prices, facilities, and seasonal information with accurate data
+- Replace Unsplash placeholders with real Miacher Kho photography
+- Update rates and seasonal info with accurate data
 - Add real guest reviews only
-- Confirm all travel/access details before publishing
-
----
-Built according to the AI Website Development Prompt for Miacher Kho.
+- Confirm travel/access details before publishing
